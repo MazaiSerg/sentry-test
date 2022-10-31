@@ -12,3 +12,8 @@
 ```bash 
 yarn serve frontend --single --listen 8000
 ```
+
+## Database
+```bash
+docker compose up
+```

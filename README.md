@@ -6,14 +6,10 @@
 Что-то отдаленно напоминающее Google Analytics. 
 Посетитель ходит по сайту и тыкает по кнопкам, а на сервере остаются логи его активности.
 
-## Frontend
-
-Запуск: 
-```bash 
-yarn serve frontend --single --listen 8000
-```
-
-## Database
-```bash
-docker compose up
-```
+## Запуск
+1. Билдим трекер `tsc --out dist/Tracker.js frontend/Tracker/Tracker.ts`
+2. Настраиваем `.env`, 
+   1. если для БД используется докер, то достаточно переименовать `.env.example` в `.env`
+3. Запускаем БД `docker compose up`
+4. Запускаем бэкенд `yarn start:dev`
+5. Запускаем фронтенд `yarn serve frontend --single --listen 8000`
